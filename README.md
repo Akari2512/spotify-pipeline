@@ -25,6 +25,7 @@ spotify-pipeline/
 │   └── processed/               # Transformed and aggregated data
 ├── extract.py                   # Extract raw CSV file
 ├── transform.py                 # Clean and transform data
+├── load.py                      # Load the transformed data into AWS Bucket 
 └── README.md
 ```
 
@@ -44,7 +45,7 @@ spotify-pipeline/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/spotify-pipeline.git
+git clone https://github.com/Akari2512/spotify-pipeline.git
 cd spotify-pipeline
 ```
 
@@ -71,6 +72,7 @@ aws configure
 ```bash
 python extract.py
 python transform.py
+python load.py
 ```
 
 ### 6. Upload processed data to S3 and run Athena queries
